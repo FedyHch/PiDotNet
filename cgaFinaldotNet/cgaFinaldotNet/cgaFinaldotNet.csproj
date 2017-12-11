@@ -269,9 +269,11 @@
     <Content Include="Views\InsuranceCompany\Create.cshtml" />
     <Content Include="Views\InsuranceCompany\Edit.cshtml" />
     <Content Include="Views\InsuranceCompany\Delete.cshtml" />
+    <Content Include="Views\Shared\_mytemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\mytemplate\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
