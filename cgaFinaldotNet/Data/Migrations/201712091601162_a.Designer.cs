@@ -6,14 +6,14 @@ namespace Data.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class v1 : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.0.0-20911")]
+    public sealed partial class version1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(v1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(version1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712091544429_v1"; }
+            get { return "201712080906405_version1"; }
         }
         
         string IMigrationMetadata.Source

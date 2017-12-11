@@ -9,7 +9,6 @@ namespace Data.Migrations
     {
         public Configuration()
         {
-            SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
             AutomaticMigrationsEnabled = false;
         }
 
