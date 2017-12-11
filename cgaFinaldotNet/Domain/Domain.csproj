@@ -53,6 +53,7 @@
     <Compile Include="insuranecpolicy.cs" />
     <Compile Include="post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rendez_vous.cs" />
     <Compile Include="subject.cs" />
     <Compile Include="tow.cs" />
     <Compile Include="user.cs" />

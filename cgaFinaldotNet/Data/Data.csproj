@@ -31,11 +31,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -61,9 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712080906405_version1.cs" />
-    <Compile Include="Migrations\201712080906405_version1.Designer.cs">
-      <DependentUpon>201712080906405_version1.cs</DependentUpon>
+    <Compile Include="Infrastructure\DatabaseFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDatabaseFactory .cs" />
+    <Compile Include="Infrastructure\IRepositoryBase.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201712091544429_v1.cs" />
+    <Compile Include="Migrations\201712091544429_v1.Designer.cs">
+      <DependentUpon>201712091544429_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\cgadbContext.cs" />
@@ -75,6 +82,7 @@
     <Compile Include="Models\Mapping\insurancecompanyMap.cs" />
     <Compile Include="Models\Mapping\insuranecpolicyMap.cs" />
     <Compile Include="Models\Mapping\postMap.cs" />
+    <Compile Include="Models\Mapping\RendezVousMap.cs" />
     <Compile Include="Models\Mapping\subjectMap.cs" />
     <Compile Include="Models\Mapping\towMap.cs" />
     <Compile Include="Models\Mapping\userMap.cs" />
@@ -107,8 +115,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712080906405_version1.resx">
-      <DependentUpon>201712080906405_version1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712091544429_v1.resx">
+      <DependentUpon>201712091544429_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

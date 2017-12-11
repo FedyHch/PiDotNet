@@ -1,6 +1,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using Data.Models.Mapping;
+using Domain;
 
 namespace Data.Models
 {
@@ -30,6 +31,7 @@ namespace Data.Models
         public DbSet<user_event> user_event { get; set; }
         public DbSet<vehicule> vehicules { get; set; }
         public DbSet<vehicule_claim> vehicule_claim { get; set; }
+        public DbSet<rendez_vous> rebndez_vous { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -47,6 +49,8 @@ namespace Data.Models
             modelBuilder.Configurations.Add(new user_eventMap());
             modelBuilder.Configurations.Add(new vehiculeMap());
             modelBuilder.Configurations.Add(new vehicule_claimMap());
+            modelBuilder.Configurations.Add(new rendezVousMap());
+
         }
     }
 }
