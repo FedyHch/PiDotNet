@@ -1,0 +1,32 @@
+﻿@model Data.Models.evenement_user
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_mytemplate.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Are You sure you want to add a reservation for this event ?</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+     
+
+       
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Participate" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "IndexUser","Event",null,null)
+</div>
